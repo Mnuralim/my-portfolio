@@ -11,11 +11,11 @@ interface Props {
 
 const DetailPorto = ({ porto, setShowModal }: Props) => {
   return (
-    <div className="z-[1000] h-screen fixed inset-0 bg-black/75 flex items-center justify-center">
+    <div className="z-[1000]  h-screen fixed inset-0 bg-black/75 flex items-center justify-center">
       <div className="md:w-3/5 h-full w-full md:p-10 flex justify-center items-center ">
-        <div className="bg-hard-color w-full h-full md:h-2/3 border p-3 md:p-8 rounded-md relative">
+        <div className="bg-hard-color w-full h-full md:h-2/3 border p-3 pb-40 md:p-8 rounded-md relative overflow-y-auto">
           <button className="absolute top-3 right-3">
-            <AiOutlineClose onClick={() => setShowModal(false)} />
+            <AiOutlineClose onClick={() => setShowModal(false)} className="text-white" />
           </button>
           <h2 className="text-2xl font-bold mb-4 mt-3 text-white">Project Description</h2>
           <p className="text-white mb-4">{porto.description}</p>

@@ -36,7 +36,7 @@ export default function About({ user }: Props) {
   }
   return (
     <section className="relative mt-10 p-5 lg:px-16" id="about">
-      <h1 className="mt-10 mb-8 text-4xl font-bold text-center text-slate-700 lg:text-5xl  dark:text-slate-50">
+      <h1 className="mt-10 mb-10 text-4xl font-bold text-center text-slate-700 lg:text-5xl  dark:text-slate-50">
         About <span className="text-indigo-500">Me</span>
       </h1>
       <div className="flex flex-col items-center gap-3 justify-center md:mt-5 md:gap-5 lg:flex-row lg:gap-48">
