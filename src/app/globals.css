@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.blob {
+  border-radius: 36% 64% 44% 56% / 59% 60% 40% 41%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.spinner {
+  position: relative;
+}
+
+.spinner::before,
+.spinner::after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.spinner::before {
+  width: 5.7px;
+  height: 5.7px;
+  background: #fdfdff;
+}
+
+.spinner::after {
+  width: 20px;
+  height: 20px;
+  animation: spinner-y7ej37 1s infinite linear;
+  border: 5.2px solid #fdfdff;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+@keyframes spinner-y7ej37 {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
