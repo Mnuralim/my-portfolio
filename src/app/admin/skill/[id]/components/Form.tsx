@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { ISkill } from '../../../../../../types'
 import Image from 'next/image'
-import { FaCamera } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import { updateSkill } from '@/lib/skill'
 import { customRevalidatePath } from '@/lib/action'
@@ -55,7 +54,6 @@ const Form = ({ skill }: Props) => {
       setIsLoading(false)
     }
   }
-
   return (
     <form onSubmit={handleSumbit} className="w-full gap-10 flex">
       <div className="w-1/3">
@@ -100,9 +98,9 @@ const Form = ({ skill }: Props) => {
             className="w-full bg-hard-color py-2 px-4 border border-slate-600 rounded outline-none"
             onChange={(e) => setType(e.target.value)}
           >
-            <option value="language">Language</option>
-            <option value="tools">Tools</option>
-            <option value="library">Library</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="tools">Tools & Language</option>
           </select>
           <input id="logo" type="file" className="hidden" accept="image/*" onChange={handleImageChange} />
           <button disabled={isLoading} type="submit" className="mt-8 rounded h-11 w-full bg-indigo-500">

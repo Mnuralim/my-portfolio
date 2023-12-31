@@ -8,7 +8,7 @@ import { FaCamera } from 'react-icons/fa'
 
 const Form = () => {
   const [title, setTitle] = useState('')
-  const [type, setType] = useState('language')
+  const [type, setType] = useState('frontend')
   const [isLoading, setIsLoading] = useState(false)
   const [thumbnail, setThumbnail] = useState<null | ArrayBuffer | string>(null)
   const [logo, setLogo] = useState<null | ArrayBuffer | string | File>(null)
@@ -50,6 +50,7 @@ const Form = () => {
       setIsLoading(false)
     }
   }
+  console.log(type)
 
   return (
     <form onSubmit={handleSumbit} className="w-full gap-10 flex">
@@ -95,9 +96,9 @@ const Form = () => {
             className="w-full bg-hard-color py-2 px-4 border border-slate-600 rounded outline-none"
             onChange={(e) => setType(e.target.value)}
           >
-            <option value="language">Language</option>
-            <option value="tools">Tools</option>
-            <option value="library">Library</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="tools">Tools & Language</option>
           </select>
           <input id="logo" type="file" className="hidden" accept="image/*" onChange={handleImageChange} />
           <button disabled={isLoading} type="submit" className="mt-8 rounded h-11 w-full bg-indigo-500">

@@ -91,7 +91,7 @@ const Form = ({ porto, skills }: Props) => {
       <div className="w-1/3">
         <label
           htmlFor="image"
-          className="w-full inline-block cursor-pointer aspect-square bg-soft-color rounded-lg p-5 overflow-hidden"
+          className="w-full inline-block cursor-pointer aspect-video bg-soft-color rounded-lg p-5 overflow-hidden"
         >
           {thumbnail ? (
             <Image
@@ -184,7 +184,7 @@ const Form = ({ porto, skills }: Props) => {
           <input id="image" type="file" className="hidden" accept="image/*" onChange={handleImageChange} />
 
           <button disabled={isLoading} type="submit" className="mt-8 rounded h-11 w-full bg-indigo-500">
-            {!isLoading ? 'Create' : <span className="spinner"></span>}
+            {!isLoading ? 'Update' : <span className="spinner"></span>}
           </button>
         </div>
       </div>

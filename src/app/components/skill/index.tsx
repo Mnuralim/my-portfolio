@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Skill = ({ skills }: Props) => {
-  const [activeSkill, setActiveSkill] = useState<string>('language')
+  const [activeSkill, setActiveSkill] = useState<string>('frontend')
 
   return (
     <section className="relative mt-10 lg:mt-32" id="skill">
@@ -20,19 +20,19 @@ const Skill = ({ skills }: Props) => {
           <div className="flex w-full max-w-full space-x-1 rounded-xl bg-slate-300/30 p-1 dark:bg-slate-700/30">
             <button
               className={`transition-colors duration-300 ease-linear w-full rounded-xl ${
-                activeSkill == 'language' ? 'bg-indigo-500 text-white' : 'bg-transparent'
+                activeSkill == 'frontend' ? 'bg-indigo-500 text-white' : 'bg-transparent'
               }  text-sm leading-5 font-medium py-3`}
-              onClick={() => setActiveSkill('language')}
+              onClick={() => setActiveSkill('frontend')}
             >
-              Language
+              Frontend
             </button>
             <button
               className={`transition-colors duration-300 ease-linear w-full rounded-xl ${
-                activeSkill == 'library' ? 'bg-indigo-500 text-white' : 'bg-transparent'
+                activeSkill == 'backend' ? 'bg-indigo-500 text-white' : 'bg-transparent'
               }  text-sm leading-5 font-medium py-3`}
-              onClick={() => setActiveSkill('library')}
+              onClick={() => setActiveSkill('backend')}
             >
-              Library
+              Backend
             </button>
             <button
               className={`transition-colors duration-300 ease-linear w-full rounded-xl ${
@@ -40,7 +40,7 @@ const Skill = ({ skills }: Props) => {
               }  text-sm leading-5 font-medium py-3`}
               onClick={() => setActiveSkill('tools')}
             >
-              Tools
+              Tools & Language
             </button>
           </div>
         </div>
