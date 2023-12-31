@@ -16,7 +16,7 @@ const SidebarItem = ({ nav }: Props) => {
   return (
     <Link
       href={nav.href}
-      className={`w-full h-12 gap-3 flex px-4 items-center ${pathName === nav.href ? 'bg-indigo-800' : ''}`}
+      className={`w-full h-12 gap-3 flex px-4 items-center ${pathName.startsWith(nav.href) ? 'bg-indigo-800' : ''}`}
       key={nav.name}
     >
       <span>{nav.icon}</span>
