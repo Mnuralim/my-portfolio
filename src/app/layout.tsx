@@ -7,7 +7,6 @@ import { getUserData } from '@/lib/user'
 import { IUser } from '../../types'
 import { ThemeContextProvider } from '../../context/theme'
 
-const inter = Inter({ subsets: ['latin'] })
 const monstserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
