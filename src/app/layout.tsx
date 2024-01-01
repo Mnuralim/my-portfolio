@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
 import Header from './components/navigation/Header'
 import Footer from './components/Footer'
@@ -8,6 +8,7 @@ import { IUser } from '../../types'
 import { ThemeContextProvider } from '../../context/theme'
 
 const inter = Inter({ subsets: ['latin'] })
+const monstserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +20,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const user: IUser = getUser.data
   return (
     <html lang="en">
-      <body className={`${inter.className} scroll-smooth bg-slate-50 dark:bg-slate-800 dark:text-slate-50`}>
+      <body className={`${monstserrat.className} scroll-smooth bg-slate-50 dark:bg-slate-800 dark:text-slate-50`}>
         <ThemeContextProvider>
           <Header />
           <section className="relative">
